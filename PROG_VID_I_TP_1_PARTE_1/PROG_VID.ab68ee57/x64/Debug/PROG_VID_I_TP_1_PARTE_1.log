@@ -1,0 +1,5 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: The intermediate directory (PROG_VID.ab68ee57\x64\Debug\) contains files shared from another project (PROG_VID_I_TP_1_PARTE_1.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  main.cpp
+D:\Universidad - Cris\Videojuegos\Universidad del Litoral\Programación de Videojuegos I\PROG_VID_I_TP_1_PARTE_2\PROG_VID_I_TP_1_PARTE_1\main.cpp(14,11): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+D:\Universidad - Cris\Videojuegos\Universidad del Litoral\Programación de Videojuegos I\PROG_VID_I_TP_1_PARTE_2\PROG_VID_I_TP_1_PARTE_1\main.cpp(66,25): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  PROG_VID_I_TP_1_PARTE_1.vcxproj -> D:\Universidad - Cris\Videojuegos\Universidad del Litoral\Programación de Videojuegos I\PROG_VID_I_TP_1_PARTE_2\PROG_VID_I_TP_1_PARTE_1\x64\Debug\PROG_VID_I_TP_1_PARTE_2.exe
