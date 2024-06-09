@@ -38,7 +38,7 @@ void Block::setValue(int value) {
 
 void Block::setPosition(float x, float y) {
     sprite.setPosition(x, y);
-    text.setPosition(x + 20, y - 20); // Ajustar la posición del texto sobre el bloque
+    text.setPosition(x + 5, y + 8); // Ajustar la posición del texto sobre el bloque
 }
 
 sf::Vector2f Block::getPosition() const {
