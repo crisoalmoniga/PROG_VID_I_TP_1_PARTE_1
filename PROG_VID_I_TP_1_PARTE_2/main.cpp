@@ -9,6 +9,13 @@
 #include <ctime>
 #include <cstdlib>
 
+
+//Tengo varias cosas pendientes y otras que no llego a corregir:
+// - Implementar Afichmation: en este caso no llegué a agregar la clase.
+// - Música: si bien no es parte de la consigna, agregué algo de sonido pero no llegué con la música ya que tengo que editar el loop en reaper y luego implementarla.
+// - Organizar el main: creo que podría llevarme la carga de texturas a cada clase y me entró la misma duda con el ordenamiento burbuja, está bien que cargue en el main?
+
+
 // Método de ordenamiento burbuja
 void bubbleSort(std::vector<int>& arr) {
     int n = arr.size();
@@ -22,24 +29,29 @@ void bubbleSort(std::vector<int>& arr) {
 }
 
 int main() {
+    // Crear una ventana de SFML
     sf::RenderWindow window(sf::VideoMode(800, 600), "PROG_VID_I_TP_1_PARTE_2");
     window.setFramerateLimit(60);
 
+    // Cargar la textura de Mario
     sf::Texture marioTexture;
     if (!marioTexture.loadFromFile("assets/mario.png")) {
         return 1;
     }
 
+    // Cargar la textura del fondo
     sf::Texture backgroundTexture;
     if (!backgroundTexture.loadFromFile("assets/mundo_fondo.jpg")) {
         return 1;
     }
 
+    // Cargar la textura del bloque
     sf::Texture blockTexture;
     if (!blockTexture.loadFromFile("assets/bloque_pared.png")) {
         return 1;
     }
 
+    // Cargar la fuente para los textos
     sf::Font font;
     if (!font.loadFromFile("assets/military_font_7.ttf")) {
         return 1;
@@ -58,7 +70,10 @@ int main() {
     }
     sf::Sound collisionSound(collisionBuffer);
 
+    // Crear el objeto Mario
     Mario mario(marioTexture, jumpSound);
+
+    // Crear el objeto Fondo
     Fondo fondo(backgroundTexture);
 
     // Crear un vector de valores desordenados
@@ -68,7 +83,7 @@ int main() {
         value = std::rand() % 999 + 1;
     }
 
-    // Crear bloques
+    // Crear los bloques con los valores desordenados
     std::vector<Block> blocks;
     for (int value : values) {
         blocks.emplace_back(value, font, blockTexture);
